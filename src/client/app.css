@@ -1,0 +1,16 @@
+h1 {
+  color: green;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+#select_reference {
+  max-width: 500px;
+}
+
+div.ag-theme-alpine div.ag-row {
+  font-size: 12px !important;
+}
