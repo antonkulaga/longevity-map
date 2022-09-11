@@ -19,7 +19,6 @@ export const App = () => {
     }
     return (
         <Router>
-
                         <Menu color="blue" icon tabular>
 
                             <Menu.Item name="Database"

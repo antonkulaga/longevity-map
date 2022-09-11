@@ -14,7 +14,7 @@ import {
 } from 'ag-grid-community';
 import { IOlympicData } from './interfaces';
 
-function dateComparator(date1: string, date2: string) {
+const dateComparator = (date1: string, date2: string) => {
     const date1Number = monthToComparableNumber(date1);
     const date2Number = monthToComparableNumber(date2);
     if (date1Number === null && date2Number === null) {
@@ -30,7 +30,7 @@ function dateComparator(date1: string, date2: string) {
 }
 
 // eg 29/08/2004 gets converted to 20040829
-function monthToComparableNumber(date: string) {
+const monthToComparableNumber = (date: string) => {
     if (date === undefined || date === null || date.length !== 10) {
         return null;
     }
