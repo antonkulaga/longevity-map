@@ -1,5 +1,8 @@
 # Longevity Map, new edition
 
+This is a website which you can use to find the information about different human genetic variants associated with longevity (based on age-related databases by João Pedro group). Currently in the development stage.
+
+
 # Setting up #
 
 The project depends on nodejs and yarn. Note: official software sources of Linux distributions rely on outdated versions of node and yarn
