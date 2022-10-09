@@ -12,5 +12,16 @@ body {
 }
 
 div.ag-theme-alpine div.ag-row {
+  --ag-background-color: #eff3fa;
   font-size: 12px !important;
+  --ag-widget-horizontal-spacing: 10px;
+  white-space: normal !important;
+}
+.ag-header{
+  --ag-header-column-resize-handle-display: block;
+  --ag-header-background-color: #d6e3f7;
+  white-space: normal !important;
+}
+.ag-theme-alpine {
+  white-space: normal !important;
 }
