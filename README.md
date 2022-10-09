@@ -1,6 +1,6 @@
 # Longevity Map, new edition
 
-This is a website which you can use to find the information about different human genetic variants associated with longevity (based on age-related databases by João Pedro group). Currently in the development stage.
+This is a website which you can use to find the information about different human genetic variants associated with longevity (based on [LongevityMap]https://genomics.senescence.info/longevity/) by João Pedro group). Currently in the development stage.
 
 
 # Setting up #
