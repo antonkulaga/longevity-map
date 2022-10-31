@@ -35,6 +35,6 @@ app.get("/api/longevity", (req: Request, res: Response) =>{
     }
 )
 
-console.log( 'http://' + (process.env.HOST || '0.0.0.0') + ':' + (process.env.PORT || '8080'))
+console.log( 'http://' + (process.env.HOST || '0.0.0.0') + ':' + (process.env.PORT || '8085'))
 
-app.listen(process.env.PORT || 8080, () => console.log(`Listening in dev mode on port ${process.env.PORT || 8080}!`));
+app.listen(process.env.PORT || 8085, () => console.log(`Listening in dev mode on port ${process.env.PORT || 8085}!`));
