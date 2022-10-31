@@ -12,7 +12,7 @@ export const About = () => {
 
     return (
         <Segment>
-            <Message>#eef1f7
+            <Message>
                 <Message.Header>
                    About Page
                 </Message.Header>
