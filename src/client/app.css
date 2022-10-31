@@ -16,6 +16,8 @@ div.ag-theme-alpine div.ag-row {
   font-size: 12px !important;
   --ag-widget-horizontal-spacing: 10px;
   white-space: normal !important;
+  line-height: 0px !important;
+  overflow-wrap: break-word !important;
 }
 .ag-header{
   --ag-header-column-resize-handle-display: block;

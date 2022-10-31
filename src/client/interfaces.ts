@@ -1,20 +1,19 @@
 export interface ILongevityRow{
-    id: number;
-    quickyear:number;
-    population_id: number;
-    study_design: string;
-    conclusions: string;
-    association: string;
-    gender: string;
-    identifier: string;
-    identifier_alt: string;
-    gene_symbol: string;
-    genotypes: string;
+    ID: number;
+    Quickyear:number;
+    Population_id: number;
+    Study_design: string;
+    Conclusions: string;
+    Association: string;
+    Gender: string;
+    Identifier: string;
+    Identifier_alt: string;
+    Gene_symbol: string;
+    Genotypes: string;
     "Genotype longevity weight": string;
-    Skip: string;
-    quickpubmed: number;
+    Quickpubmed: number;
     "Gene prioritization": number;
-    location: string;
-    quickref: string;
-    gene_id: number;
+    Location: string;
+    Quickref: string;
+    Gene_id: number;
 }

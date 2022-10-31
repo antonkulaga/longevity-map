@@ -15,7 +15,7 @@ import {
 import { ILongevityRow } from './interfaces';
 
 const  Database = () => {
-    const containerStyle = useMemo(() => ({ width: '100%', height: '100%' }), []);
+    const containerStyle = useMemo(() => ({ width: '100%', height: '85%' }), []);
     const gridStyle = useMemo(() => ({ height: '100%', width: '100%' }), []);
     const [rowData, setRowData] = useState<ILongevityRow[]>();
     const [columnDefs, setColumnDefs] = useState<ColDef[]>([
@@ -26,26 +26,22 @@ const  Database = () => {
         { field: 'conclusions', },
         { field: 'association' },
         { field: 'gender', filter: 'agTextColumnFilter',},
-        { field: 'identifier_alt' },
         { field: 'gene_symbol', filter: 'agTextColumnFilter' },
         { field: 'genotypes',},
         { field: 'Genotype longevity weight' },
-        { field: 'Skip' },
         { field: 'quickpubmed' },
         { field: 'Gene prioritization', sortable: true, sort: 'desc'},
         { field: 'location', filter: 'agTextColumnFilter'},
         { field: 'quickref' },
         { field: 'gene_id', sortable: true,},
+        { field: 'identifier_alt' },
     ]);
 
     const defaultColDef = useMemo<ColDef>(() => {
         return {
-            wrapHeaderText: true,
-            autoHeaderHeight: true,
-            wrapText: true,
+            minWidth: 120,
             resizable: true,
             autoHeight: true,
-            flex: 1,
             filterParams: {
                 debounceMs: 0,
                 buttons: ['apply', 'reset'],
@@ -63,25 +59,29 @@ const  Database = () => {
         columnDefs: columnDefs,
     };
 
+
+
     const onGridReady = useCallback((params: GridReadyEvent) => {
         fetch('/api/longevity')
             .then((resp) => resp.json())
             .then((data: ILongevityRow[]) => setRowData(data));
     }, []);
 
-
     return (
         <div style={containerStyle}>
             <div style={gridStyle} className="ag-theme-alpine">
                 <AgGridReact<ILongevityRow>
+
                     rowData={rowData}
                     columnDefs={columnDefs}
                     defaultColDef={defaultColDef}
                     onGridReady={onGridReady}
+                    colResizeDefault={'shift'}
                 ></AgGridReact>
             </div>
         </div>
     );
 };
+
 
 export default Database
