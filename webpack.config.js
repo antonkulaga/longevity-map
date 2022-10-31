@@ -39,7 +39,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
   devServer: {
-    port: 8083,
+    port: 8084,
     hot: true,
     allowedHosts: [
       'localhost',
