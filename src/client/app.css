@@ -19,7 +19,7 @@ div.ag-theme-alpine div.ag-row {
 }
 .ag-header{
   --ag-header-column-resize-handle-display: block;
-  --ag-header-background-color: #d6e3f7;
+  --ag-header-background-color: #c4e4f3;
   white-space: normal !important;
 }
 .ag-theme-alpine {
