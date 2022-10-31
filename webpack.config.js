@@ -39,7 +39,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
   },
   devServer: {
-    port: 8086,
+    port: 8091,
     hot: true,
     allowedHosts: [
       'localhost',
@@ -49,7 +49,7 @@ module.exports = {
     host: (process.env.HOST || '0.0.0.0'),
     open: true,
     proxy: {
-      '/api': 'http://' + (process.env.HOST || '0.0.0.0') + ':' + (process.env.PORT || '8085'),
+      '/api': 'http://' + (process.env.HOST || '0.0.0.0') + ':' + (process.env.PORT || '8090'),
       allowedHosts: [
         'localhost',
         'agingkills.eu',
