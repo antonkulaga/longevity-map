@@ -13,7 +13,7 @@ body {
 
 div.ag-theme-alpine div.ag-row {
   --ag-background-color: #eff3fa;
-  font-size: 12px !important;
+  font-size: 14px !important;
   --ag-widget-horizontal-spacing: 10px;
   white-space: normal !important;
   line-height: 0px !important;
@@ -26,4 +26,7 @@ div.ag-theme-alpine div.ag-row {
 }
 .ag-theme-alpine {
   white-space: normal !important;
+}
+.ag-header-cell-label {
+  justify-content: center;
 }

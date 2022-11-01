@@ -19,29 +19,31 @@ const  Database = () => {
     const gridStyle = useMemo(() => ({ height: '100%', width: '100%' }), []);
     const [rowData, setRowData] = useState<ILongevityRow[]>();
     const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-        { field: 'id', sortable: true, width: 10},
-        { field: 'quickyear', sortable: true,filter: 'agNumberColumnFilter', width: 10},
-        { field: 'population_id', filter: 'agNumberColumnFilter'},
-        { field: 'study_design', width: 300 },
-        { field: 'conclusions', },
-        { field: 'association' },
-        { field: 'gender', filter: 'agTextColumnFilter',},
-        { field: 'gene_symbol', filter: 'agTextColumnFilter' },
-        { field: 'genotypes',},
-        { field: 'Genotype longevity weight' },
-        { field: 'quickpubmed' },
-        { field: 'Gene prioritization', sortable: true, sort: 'desc'},
-        { field: 'location', filter: 'agTextColumnFilter'},
-        { field: 'quickref' },
-        { field: 'gene_id', sortable: true,},
-        { field: 'identifier_alt' },
+        { field: 'id', sortable: true, width: 70,},
+        { field: 'quickyear', sortable: true,filter: 'agNumberColumnFilter', width: 115},
+        { field: 'population_id', filter: 'agNumberColumnFilter', width: 140},
+        { field: 'study_design', width: 310 },
+        { field: 'conclusions', width: 390 },
+        { field: 'association', width: 120 },
+        { field: 'gender', filter: 'agTextColumnFilter', width: 120 },
+        { field: 'gene_symbol', filter: 'agTextColumnFilter', width: 140 },
+        { field: 'genotypes', width: 130 },
+        { field: 'Genotype longevity weight', width: 160 },
+        { field: 'quickpubmed' , width: 140 },
+        { field: 'Gene prioritization', sortable: true, sort: 'desc', width: 150},
+        { field: 'location', filter: 'agTextColumnFilter', width: 120},
+        { field: 'quickref', },
+        { field: 'gene_id', sortable: true,width: 100,},
+        { field: 'identifier_alt', width: 120,},
     ]);
 
     const defaultColDef = useMemo<ColDef>(() => {
         return {
-            minWidth: 120,
             resizable: true,
             autoHeight: true,
+            wrapText: true,
+            wrapHeaderText: true,
+            autoHeaderHeight: true,
             filterParams: {
                 debounceMs: 0,
                 buttons: ['apply', 'reset'],
@@ -59,7 +61,7 @@ const  Database = () => {
         columnDefs: columnDefs,
     };
 
-
+    const rowHeight = 30;
 
     const onGridReady = useCallback((params: GridReadyEvent) => {
         fetch('/api/longevity')
@@ -70,13 +72,13 @@ const  Database = () => {
     return (
         <div style={containerStyle}>
             <div style={gridStyle} className="ag-theme-alpine">
-                <AgGridReact<ILongevityRow>
-
+                <AgGridReact <ILongevityRow>
                     rowData={rowData}
                     columnDefs={columnDefs}
                     defaultColDef={defaultColDef}
                     onGridReady={onGridReady}
                     colResizeDefault={'shift'}
+                    rowHeight={rowHeight}
                 ></AgGridReact>
             </div>
         </div>
