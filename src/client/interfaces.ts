@@ -1,7 +1,7 @@
 export interface ILongevityRow{
     ID: number;
     Quickyear:number;
-    Population_id: number;
+    Population_id: string;
     Study_design: string;
     Conclusions: string;
     Association: string;

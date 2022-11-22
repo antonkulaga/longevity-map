@@ -21,7 +21,7 @@ const  Database = () => {
     const [columnDefs, setColumnDefs] = useState<ColDef[]>([
         { field: 'id', sortable: true, width: 70,},
         { field: 'quickyear', sortable: true,filter: 'agNumberColumnFilter', width: 115},
-        { field: 'population_id', filter: 'agNumberColumnFilter', width: 140},
+        { field: 'population_id', filter: 'agTextColumnFilter', width: 140},
         { field: 'study_design', width: 310 },
         { field: 'conclusions', width: 390 },
         { field: 'association', width: 120 },
